@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Heróis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .comic-title {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 2px;
+        }
+
+        .marker-font {
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .comic-card {
+            border: 4px solid black;
+            box-shadow: 8px 8px 0px 0px #ef4444;
+            transition: transform 0.2s;
+        }
+
+        .comic-card-red:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px 0px #ef4444;
+        }
+
+        .halftone {
+            background-image: radial-gradient(#444 10%, transparent 11%);
+            background-size: 10px 10px;
+        }
+
+        .comic-card-green:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px 0px #44ef80;
+        }
+
+        .halftone {
+            background-image: radial-gradient(#444 10%, transparent 11%);
+            background-size: 10px 10px;
+        }
+
+        .comic-card-blue:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px 0px #3d81ff;
+        }
+
+        .halftone {
+            background-image: radial-gradient(#444 10%, transparent 11%);
+            background-size: 10px 10px;
+        }
+
+        .comic-card-begeclaro:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px 0px #CBA080;
+        }
+
+        .halftone {
+            background-image: radial-gradient(#444 10%, transparent 11%);
+            background-size: 10px 10px;
+        }
+    </style>
+</head>
+
+<body class="halftone text-white">
+
+    <header class="bg-yellow-400 border-b-8 border-black p-8 relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 p-4 bg-red-600 border-l-4 border-b-4 border-black rotate-3 marker-font text-2xl">
+            EDIÇÃO #001
+        </div>
+        <h1 class="text-7xl text-black comic-title italic uppercase text-center drop-shadow-md">
+            Masks: A Nova Geração
+        </h1>
+        <p class="text-center text-black font-bold text-xl mt-2 italic">
+            "Quem você quer ser em Pacatópolis?"
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6">
+
+        <section class="mb-12">
+            <h2 class="text-4xl comic-title mb-6 text-yellow-400 uppercase italic">Tropa do S</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+
+                <!-- LUX -->
+                <div class="comic-card-red bg-white p-4 text-black group cursor-pointer border-2 border-black 
+            transition-all duration-300 
+            shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] 
+            group-hover:shadow-[8px_8px_0px_0px_rgba(220,38,38,1)]">
+
+                    <div
+                        class="w-full h-40 bg-black mb-2 border-2 border-black flex items-center justify-center overflow-hidden">
+                        <img src="{{ asset('herois_square/estigio.jpeg') }}" alt="Estígio"
+                            class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <h3
+                        class="font-bold text-xl uppercase leading-tight transition-colors duration-300 group-hover:text-red-600">
+                        Estígio
+                    </h3>
+
+                    <p class="text-sm italic text-zinc-500">O Nova</p>
+                </div>
+
+                <!-- LUX -->
+                <div class="comic-card-green bg-white p-4 text-black group cursor-pointer border-2 border-black 
+            transition-all duration-300 
+            shadow-[8px_8px_0px_0px_rgba(191,155,123,1)] 
+            group-hover:shadow-[8px_8px_0px_0px_rgba(222,222,1,1)]">
+
+                    <div
+                        class="w-full h-40 bg-black mb-2 border-2 border-black flex items-center justify-center overflow-hidden">
+                        <img src="{{ asset('herois_square/lux.jpeg') }}" alt="Lux"
+                            class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <h3
+                        class="font-bold text-xl uppercase leading-tight transition-colors duration-300 group-hover:text-red-600">
+                        Lux
+                    </h3>
+
+                    <p class="text-sm italic text-zinc-500">A Delinquente</p>
+                </div>
+
+                <!-- PISCO -->
+                <div class="comic-card-blue bg-white p-4 text-black group cursor-pointer border-2 border-black shadow-[8px_8px_0px_0px_rgba(255,255,255,1)]
+            transition-all duration-300 
+            shadow-[8px_8px_0px_0px_rgba(191,155,123,1)] 
+            group-hover:shadow-[8px_8px_0px_0px_rgba(222,222,1,1)]">
+
+                    <div
+                        class="w-full h-40 bg-black mb-2 border-2 border-black flex items-center justify-center overflow-hidden">
+                        <img src="{{ asset('herois_square/pisco.jpeg') }}" alt="Pisco"
+                            class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <h3
+                        class="font-bold text-xl uppercase leading-tight transition-colors duration-300 group-hover:text-red-600">
+                        Pisco
+                    </h3>
+
+                    <p class="text-sm italic text-zinc-500">O Legado</p>
+                </div>
+
+                <!-- SANGUE FRIO -->
+                <div class="comic-card-blue bg-white p-4 text-black group cursor-pointer border-2 border-black shadow-[8px_8px_0px_0px_rgba(220,38,38,1)]
+            transition-all duration-300">
+
+                    <div
+                        class="w-full h-40 bg-black mb-2 border-2 border-black flex items-center justify-center overflow-hidden">
+                        <img src="{{ asset('herois_square/sanguefrio.jpeg') }}" alt="Sangue–Frio"
+                            class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <h3
+                        class="font-bold text-xl uppercase leading-tight transition-colors duration-300 group-hover:text-red-600">
+                        Sangue–Frio
+                    </h3>
+
+                    <p class="text-sm italic text-zinc-500">O Legado</p>
+                </div>
+
+                <!-- Sombra -->
+                <div class="comic-card-begeclaro bg-white p-4 text-black group cursor-pointer border-2 border-black 
+            shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] 
+            transition-all duration-300">
+
+                    <div
+                        class="w-full h-40 bg-black mb-2 border-2 border-black flex items-center justify-center overflow-hidden">
+                        <img src="{{ asset('herois_square/sombra.jpeg') }}" alt="Sombra"
+                            class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <h3
+                        class="font-bold text-xl uppercase leading-tight transition-colors duration-300 group-hover:text-red-600">
+                        Sombra
+                    </h3>
+
+                    <p class="text-sm italic text-zinc-500">A Forasteira</p>
+                </div>
+
+                <!-- TRICKSTER -->
+                <div class="comic-card-red bg-white p-4 text-black group cursor-pointer border-2 border-black shadow-[8px_8px_0px_0px_rgba(255,255,255,1)]
+            transition-all duration-300 
+            shadow-[8px_8px_0px_0px_rgba(191,155,123,1)] 
+            group-hover:shadow-[8px_8px_0px_0px_rgba(222,222,1,1)]">
+
+                    <div
+                        class="w-full h-40 bg-black mb-2 border-2 border-black flex items-center justify-center overflow-hidden">
+                        <img src="{{ asset('herois_square/trickster.jpeg') }}" alt="Trickster"
+                            class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-300">
+                    </div>
+
+                    <h3
+                        class="font-bold text-xl uppercase leading-tight transition-colors duration-300 group-hover:text-red-600">
+                        Trickster
+                    </h3>
+
+                    <p class="text-sm italic text-zinc-500">O Reformado</p>
+                </div>
+        </section>
+        <!-- VILÕES -->
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <section class="md:col-span-2">
+                <h2 class="text-4xl comic-title mb-6 text-red-500 uppercase">Ameaças Ativas</h2>
+
+                <div class="space-y-6">
+                    <div class="comic-card bg-red-900 border-4 border-black p-6 flex gap-4">
+                        <div class="w-32 h-32 bg-black border-2 border-white shrink-0 overflow-hidden">
+                            <img src="{{ asset('viloes_square/brainrot.jpeg') }}" alt="Brainrot"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl comic-title text-yellow-400">Brainrot</h3>
+                            <p class="italic text-gray-300">"Hmm esta não é uma decisão sábia.."</p>
+                            <div class="mt-2 flex gap-2">
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Memória
+                                    Absoluta</span>
+                                <span class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Sabe
+                                    todos os números de PI</span>
+                            </div>
+                            <h4 class="text-1xl comic-title text-white-400">Classe: B</h4>
+                        </div>
+                    </div>
+
+                    <div class="comic-card bg-red-900 border-4 border-black p-6 flex gap-4">
+                        <div class="w-32 h-32 bg-black border-2 border-white shrink-0 overflow-hidden">
+                            <img src="{{ asset('viloes_square/dart.jpeg') }}" alt="Dart"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl comic-title text-yellow-400">Dart</h3>
+                            <p class="italic text-gray-300">"Weber! Weber! Weber!"
+                            </p>
+                            <div class="mt-2 flex gap-2">
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Mimetismo de perereca</span>
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Camuflagem Instantânea</span>
+                                    <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Super Salto</span>
+                            </div>
+                            <h4 class="text-1xl comic-title text-white-400">Classe: D</h4>
+                        </div>
+                    </div>
+
+                    <div class="comic-card bg-red-900 border-4 border-black p-6 flex gap-4">
+                        <div class="w-32 h-32 bg-black border-2 border-white shrink-0 overflow-hidden">
+                            <img src="{{ asset('viloes_square/dollface.jpeg') }}" alt="Doll Face"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl comic-title text-yellow-400">Doll Face</h3>
+                            <p class="italic text-gray-300">"Isto é uma pena.. Você ficaria kawaii na minha coleção :3"
+                            </p>
+                            <div class="mt-2 flex gap-2">
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Criação e Manipulação de Objetos</span>
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Toque capaz de dar vida a objetos</span>
+                                    <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Invulnerabilidade a efeitos mentais</span>
+                            </div>
+                            <h4 class="text-1xl comic-title text-white-400">Classe: B</h4>
+                        </div>
+                    </div>
+
+                    <div class="comic-card bg-red-900 border-4 border-black p-6 flex gap-4">
+                        <div class="w-32 h-32 bg-black border-2 border-white shrink-0 overflow-hidden">
+                            <img src="{{ asset('viloes_square/dracula.png') }}" alt="Dr. Ácula"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl comic-title text-yellow-400">Dr Ácula</h3>
+                            <p class="italic text-gray-300">"Todos serão primatas!"</p>
+                            <div class="mt-2 flex gap-2">
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Domínio Mental</span>
+                                    <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Imortalidade</span>
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Vampirismo</span>
+                                    <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Vôo</span>
+                            </div>
+                            <h4 class="text-1xl comic-title text-white-400">Classe: A</h4>
+                        </div>
+                    </div>
+
+                    <div class="comic-card bg-red-900 border-4 border-black p-6 flex gap-4">
+                        <div class="w-32 h-32 bg-black border-2 border-white shrink-0 overflow-hidden">
+                            <img src="{{ asset('viloes_square/eclipse.jpeg') }}" alt="Eclipse"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl comic-title text-yellow-400">Eclipse</h3>
+                            <p class="italic text-gray-300">"Não me viu saindo?"
+                            </p>
+                            <div class="mt-2 flex gap-2">
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Manipulação ocular</span>
+                            </div>
+                            <h4 class="text-1xl comic-title text-white-400">Classe: C</h4>
+                        </div>
+                    </div>
+
+                    <div class="comic-card bg-red-900 border-4 border-black p-6 flex gap-4">
+                        <div class="w-32 h-32 bg-black border-2 border-white shrink-0 overflow-hidden">
+                            <img src="{{ asset('viloes_square/observador.jpg') }}" alt="Dr. Ácula"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl comic-title text-yellow-400">Observador</h3>
+                            <p class="italic text-gray-300">"Trarei seres de todos os mundos para me vingar, Trickster!"
+                            </p>
+                            <div class="mt-2 flex gap-2">
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Criação
+                                    e Manipulação de Portais</span>
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Domínio
+                                    Mental</span>
+                            </div>
+                            <h4 class="text-1xl comic-title text-white-400">Classe: A</h4>
+                        </div>
+                    </div>
+
+                    <div class="comic-card bg-red-900 border-4 border-black p-6 flex gap-4">
+                        <div class="w-32 h-32 bg-black border-2 border-white shrink-0 overflow-hidden">
+                            <img src="{{ asset('viloes_square/squish.jpg') }}" alt="Dr. Ácula"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl comic-title text-yellow-400">Squish</h3>
+                            <p class="italic text-gray-300">"Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn"
+                            </p>
+                            <div class="mt-2 flex gap-2">
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Criação e manipulação de tentáculos!</span>
+                                <span
+                                    class="bg-black px-2 py-1 text-xs font-bold border border-white text-white">Imune a efeitos gravitacionais</span>
+                            </div>
+                            <h4 class="text-1xl comic-title text-white-400">Classe: ???</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="">
+                <h2 class="text-4xl comic-title mb-6 text-blue-400 uppercase">Status de Pacatópolis</h2>
+                <div class="bg-zinc-800 border-4 border-black p-4 space-y-4">
+                    <div class="border-b border-zinc-600 pb-2">
+                        <p class="marker-font text-yellow-400">[vazio]</p>
+                        <ul class="text-sm list-disc ml-4">
+                            <li>Prédio Central: Intacto</li>
+                            <li>Carros roubados: 01</li>
+                            <li>[vazio]</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-600 p-2 text-center border-2 border-black font-bold italic rotate-1">
+                        INFLUÊNCIA ATIVA: A.E.G.I.S.
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="mt-12 bg-black p-6 text-center text-zinc-500 border-t-4 border-yellow-400">
+        <p class="marker-font text-sm">Criado para a campanha de MASKS - 2026</p>
+    </footer>
+
+</body>
+
+</html>
